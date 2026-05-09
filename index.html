@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تهنئة لعلياء</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #ffccf9);
+      color: #4a004e;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-family: 'Dancing Script', cursive;
+      color: #ff2e93;
+      text-shadow: 0 0 6px rgba(255, 150, 200, 0.6);
+    }
+
+    .hero {
+      padding: 60px 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .arrow {
+      font-size: 32px;
+      color: #ff2e93;
+      animation: bounce 1.5s infinite;
+      margin: 10px 0;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .memories {
+      padding: 40px 20px;
+      text-align: right;
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.5);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(255, 0, 128, 0.2);
+    }
+
+    .memories p {
+      margin: 15px 0;
+      line-height: 1.8;
+      color: #5c006e;
+    }
+
+    .final {
+      margin: 40px 20px;
+      font-weight: bold;
+      color: #7a007a;
+      font-size: 20px;
+    }
+
+    /* القلوب والنجوم */
+    .falling {
+      position: fixed;
+      top: -10px;
+      font-size: 18px;
+      animation: fall linear forwards;
+      color: #ff2e93;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>كل سنة و انتي طيبة يا اعز الناس ليا 💓</h1>
+    <div class="arrow">⬇⬇</div>
+  </div>
+
+  <div class="memories">
+    <h2>بعض الذكريات</h2>
+    <p>١- يوم الجمعة الذي لا ينسي اكتر يوم عبثي و مضحك شوفتك فيه ف حياتي ( في عبث اكتر من كدا بس دا اعبثهم )</p>
+    <p>٢- اول يوم تفضحينا و تضحكي ضحكة الرقاصة بتاعتك دي يوم لما قعدت و كسرت القلم و ضحكتي ( يا جزمة )</p>
+    <p>٣- وقوفك جنبي في كل الاوقات حتي لو مدايقة مني و بتيجي تصالحيني و تتكلمي معايا </p>
+    <p>٤ - اول سهرة واتس اب قعدنا في رمضان ٦ ساعات متواصلين نتكلم واتس </p>
+
+    <p>و دول مش بس المواقف دي في كتيررررررررررر و عبثيات و مواقف بايظة كتير بس كفاية</p>
+    <p>اكتر حد كان بيفهمني و يتكلم معايا و يفوقني هو انت مكنتش متخيل هلاقي حد زيك</p>
+    <p><b>شكرا 💜</b></p>
+  </div>
+
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+
+  <div class="final">
+    الشنطة تقريباً بتاعتك حد خد منها حاجة ارجو تبصي فيها
+  </div>
+
+  <div class="final" style="color:#d1005c; margin-top:20px;">
+    اوعي تنزلي الا لما تفتحي الشنطة الاول 😡
+  </div>
+
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+
+  <div class="final" style="color:#5c006e; margin-top:20px;">
+    اتمني نبقي مع بعض ع طول حتي لو بعد ٢٠ سنة <br>
+    كل سنة و انتي هنا علي طول ❤️
+  </div>
+
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+  <div class="arrow">⬇⬇</div>
+
+  <div class="final" style="color:#333; margin-top:20px;">
+    عارف ان هي مش حاجة قيمة بس يا رب تعجبك 😶
+  </div>
+
+  <script>
+    // قلوب ونجوم بتنزل
+    const symbols = ["💖","✨","💓","⭐","💕","🌸"];
+    function createFalling() {
+      const el = document.createElement("div");
+      el.classList.add("falling");
+      el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (3 + Math.random() * 4) + "s";
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 7000);
+    }
+    setInterval(createFalling, 600);
+  </script>
+
+</body>
+</html>
